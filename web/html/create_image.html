@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/style.css">
+   <link rel="stylesheet" href="/static/css/form.css"> 
+    <title>Добавить изображение</title>
+</head>
+
+<body>
+    <div class='top'></div>
+    <form method="post" class="k-form" enctype="multipart/form-data">
+        <ul class="wrapper">
+            <li class="form-row">
+                <p class="title">Добавить фото</p>
+            </li>
+            {{ if . }}
+                <li class="form-row">
+                    <p class="warn">Ошибка: "{{ . }}"</p>
+                </li>
+            {{ end }}
+            <li class="form-row">
+                <input type="file" name="image" class="input">
+            </li>
+            <li class="form-row">
+                <input type="text" name="label" placeholder="Текст" class="input">
+            </li>
+            <li class="form-row">
+                <input type="text" name="name" placeholder="Имя" class="input">
+            </li>
+            <li class="form-row">
+                <input type="submit" value="Добавить" class="button">
+            </li>
+        </ul>
+    </form>
+</body>
+</html>

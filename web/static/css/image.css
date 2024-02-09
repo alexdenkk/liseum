@@ -1,0 +1,145 @@
+img{
+    user-select: none;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 100px 0px;
+    flex-wrap: wrap;
+}
+.window {
+    border-radius: 20px;
+    margin: 10px;
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+    z-index: 97;
+    -webkit-box-shadow: 10px 5px 10px 5px rgba(34, 60, 80, 0.2);
+    -moz-box-shadow: 10px 5px 10px 5px rgba(34, 60, 80, 0.2);
+    box-shadow: 10px 5px 10px 5px rgba(34, 60, 80, 0.2);
+}
+
+.window .foto {
+    width: 300px;
+    height: 300px;
+    border-radius: 20px;
+    cursor: zoom-in;
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -o-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+    object-fit: cover;
+}
+
+.window .content {
+    margin-left: 10px;
+    margin-top: -2px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.hover-zone {
+    transition: all 0.5s ease;
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    height: 300px;
+    border-radius: 20px;
+    cursor: zoom-in;
+    display: flex;
+    align-content: space-between;
+    align-items: baseline;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: rgba(000, 000, 0, 0.40);
+    user-select: none;
+}
+
+.hover-zone .top-bar p {
+    color: white;
+    font-size: 20px;
+    font-weight: bolder;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.hover-zone .top-bar a {
+    color: white;
+    padding: 15px 25px;
+    font-weight: bolder;
+    font-size: 18px;
+    border-radius: 40px;
+    cursor: pointer;
+    background: red;
+}
+.hover-zone .top-bar a:hover {
+    background:#b80202;
+}
+.hover-zone .bottom-bar {
+    padding:10px 10px;
+    width: 100%;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hover-zone .bottom-bar a {
+    padding: 5px 10px;
+    background: #efefef;
+    border-radius: 40px;
+    cursor: pointer;
+    font-weight: bolder;
+}
+
+.hover-zone .bottom-bar a:hover {
+    background: white;
+}
+
+
+
+.hover-zone .bottom-bar img:hover {
+    background: white;
+}
+
+.hover-zone {
+    opacity: 0;
+}
+
+.window:hover .hover-zone {
+    opacity: 1;
+}
+
+.window a {
+    text-decoration: none;
+    color: #161b22;
+}
+
+@media screen and (max-width:550px) {
+    .container{
+        margin: 10px 0px 40px 0px;
+    }
+}
+
+.solo-wrapper {
+    width: 90%;
+    height: 90%;
+    margin: 10px;
+    border: 5px solid #990ae3;
+}
+
+.solo-img {
+    max-width: 50%;
+    border: 5px solid #990ae3;
+    max-height: 50%;
+}
+
+@media screen and (max-width:550px) {
+    .container{
+        margin: 10px 0px 40px 0px;
+    }
+}

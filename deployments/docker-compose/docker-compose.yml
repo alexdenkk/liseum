@@ -1,0 +1,29 @@
+version: "3"
+
+services:
+
+  # db:
+  #   container_name: db
+  #   image: postgres:13-alpine
+
+  #   environment:
+  #     - POSTGRES_USER=alexdenkk
+  #     - POSTGRES_PASSWORD=12345678
+  #     - POSTGRES_DB=db
+
+  #   ports:
+  #     - 5432:5432
+  #   expose:
+  #     - 5432
+
+  liseum:
+    container_name: liseum
+
+    build:
+      context: ../..
+      dockerfile: ../deployments/docker/Dockerfile
+
+    command: ./liseum
+
+    ports:
+      - 8000:8000

@@ -1,0 +1,29 @@
+.list-item {
+    display: inline-block;
+    width: calc(25% - 2rem);
+}
+
+.list-item * {
+    text-decoration: none;
+}
+
+@media screen and (max-width: 64rem){
+    .list-item {
+        width: calc(33.333333% - 2rem);
+        margin: 1rem;
+    }
+}
+
+@media screen and (max-width: 48rem){
+    .list-item {
+        width: calc(50% - 2rem);
+        margin-bottom: 1rem;
+    }
+}
+
+@media screen and (max-width: 32rem){
+    .list-item {
+        width: 100%;
+        margin: 0 0 2rem 0;
+    }
+}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="/static/css/form.css">
+    <title>Админ панель</title>
+</head>
+
+<body>
+    <div class='top'></div>
+    <div class="k-form">
+        <ul class="wrapper">
+            <li class="form-row">
+                <p class="title">Админ панель</p>
+            </li>
+            <a href="/class/create/">
+                <li class="form-row">
+                    <button class="button">Добавить класс</button>
+                </li>
+            </a>
+            <li class="form-row">
+                <p class="title">Классы</p>
+            </li>
+            {{ range . }}
+                <a href="/img/{{ .Name }}/create/">
+                    <li class="form-row">
+                        <button class="button">Добавить изображение для {{ .Name }}</button>
+                    </li>
+                </a>
+            {{ end }}
+        </ul>
+    </div>
+</body>
+</html>

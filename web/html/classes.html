@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="/static/css/list.css">
+    <title>Классы</title>
+</head>
+<body>
+    <div class='top'></div>
+    {{ range . }}
+        <div class="list-item">
+            <a href="/img/for/{{ .Name }}/">
+                <img src="/static/site/folder.svg">
+                <h1>{{ .Name }}</h1>
+            </a>
+        </div>
+    {{ end }}
+</body>
+</html>
