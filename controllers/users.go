@@ -50,7 +50,7 @@ func (h *Handler) LoginUser(w http.ResponseWriter, r *http.Request) {
 		}
 
 		tools.SetCookie(w, "token", token)
-		http.Redirect(w, r, "/", http.StatusMovedPermanently)
+		http.Redirect(w, r, "/admin/", http.StatusMovedPermanently)
 
 	} else if r.Method == http.MethodGet {
 		tmpl, _ := template.ParseFiles("./web/html/login.html")
