@@ -12,7 +12,7 @@ func SetCookie(w http.ResponseWriter, name, value string) {
 		Path:     "/",
 		Expires:  time.Now().Add(1000 * time.Hour),
 		HttpOnly: true,
-		Secure:   true,
+		Secure:   false,
 	}
 
 	http.SetCookie(w, &cookie)
