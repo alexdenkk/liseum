@@ -12,7 +12,7 @@ func SetCookie(w http.ResponseWriter, name, value string) {
 		Value:    value,
 		Path:     "http://147.45.108.41/",
 		Expires:  time.Now().Add(1000 * time.Hour),
-		HttpOnly: true,
+		HttpOnly: false,
 		Secure:   false,
 	}
 
