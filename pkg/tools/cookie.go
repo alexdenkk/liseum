@@ -8,9 +8,10 @@ import (
 
 func SetCookie(w http.ResponseWriter, name, value string) {
 	cookie := http.Cookie{
-		Name:  name,
-		Value: value,
-		//Path:     "http://147.45.108.41/",
+		Name:     name,
+		Value:    value,
+		Path:     "/",
+		Domain:   "147.45.108.41",
 		Expires:  time.Now().Add(1000 * time.Hour),
 		HttpOnly: false,
 		Secure:   false,
