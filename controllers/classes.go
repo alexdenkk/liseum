@@ -49,7 +49,7 @@ func (h *Handler) CreateClass(w http.ResponseWriter, r *http.Request, act *token
 			return
 		}
 
-		http.Redirect(w, r, "/class/"+name+"/", http.StatusMovedPermanently)
+		http.Redirect(w, r, "/img/for/"+name+"/", http.StatusMovedPermanently)
 
 	} else if r.Method == http.MethodGet {
 		tmpl := template.Must(template.ParseFiles("./web/html/create_class.html"))
