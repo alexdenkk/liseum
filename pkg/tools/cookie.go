@@ -1,7 +1,6 @@
 package tools
 
 import (
-	"fmt"
 	"net/http"
 	"time"
 )
@@ -22,7 +21,6 @@ func SetCookie(w http.ResponseWriter, name, value string) {
 
 func GetCookie(r *http.Request, name string) (string, error) {
 	cookie, err := r.Cookie(name)
-	fmt.Println(cookie)
 
 	if err != nil {
 		return "", err
