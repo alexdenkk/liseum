@@ -119,3 +119,19 @@ func (h *Handler) GetImagesFor(w http.ResponseWriter, r *http.Request) {
 	tmpl := template.Must(template.ParseFiles("./web/html/images.html"))
 	tmpl.Execute(w, images)
 }
+
+func (h *Handler) GetImage(w http.ResponseWriter, r *http.Request) {
+	id, _ := strconv.Atoi(mux.Vars(r)["id"])
+
+	ctx := context.WithValue(context.Background(), "request", r)
+
+	img, err := h.Repository.GetImage(ctx, uint(id))
+
+	if err != nil {
+		http.Error(w, err.Error(), http.StatusInternalServerError)
+		return
+	}
+
+	tmpl := template.Must(template.ParseFiles("./web/html/image.html"))
+	tmpl.Execute(w, img)
+}

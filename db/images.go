@@ -12,6 +12,13 @@ func (r *Repository) GetImagesFor(ctx context.Context, classID uint) ([]model.Im
 	return images, result.Error
 }
 
+// GetImagesFor - function for getting images records by class ID
+func (r *Repository) GetImage(ctx context.Context, id uint) (model.Image, error) {
+	var img model.Image
+	result := r.DB.First(&img, id)
+	return img, result.Error
+}
+
 // CreateImage - function for creating image record
 func (r *Repository) CreateImage(ctx context.Context, img *model.Image) error {
 	result := r.DB.Create(img)
@@ -24,6 +31,7 @@ func (r *Repository) UpdateImage(ctx context.Context, img *model.Image) error {
 	return result.Error
 }
 
+// DeleteImage - function for deleting image record
 func (r *Repository) DeleteImage(ctx context.Context, id uint) error {
 	result := r.DB.Delete(&model.Image{}, id)
 	return result.Error

@@ -8,9 +8,14 @@
     <title>Изображение</title>
 </head>
 <body>
-    <div class="solo-wrapper">
-        <img src="{{ .FileName }}" class="solo-img">
-        
-    </div>
+    <style>
+        body {
+            text-align: left;
+        }
+    </style>
+    <h1>!!!Сверстать!!!</h1>
+    <img src="{{ .FileName }}">
+    <p>{{ .Label }}</p>
+    <p>{{ .Name }}</p>
 </body>
 </html>

@@ -3,8 +3,8 @@
     padding: 1em;
     margin: 1em;
     font-size: 16;
-    border: solid 3px #990ae3;
-    background-color: #252525;
+    border: solid 3px #222831;
+    background-color: #DDDDDD;
     max-width: 20em;
 }
 
@@ -12,37 +12,36 @@
     display: flex;
     justify-content: flex-end;
     margin: 0.5em;
-    background-color: #252525;
+    background-color: #DDDDDD;
 }
 
 .input {
     flex: 1;
     padding: 1em;
-    color: #dddddd;
-    background-color: #252525;
+    color: #222831;
+    background-color: #DDDDDD;
     font-weight: 500;
     font-size: 1em;
-    border: solid 3px #990ae3;
+    border: solid 3px #222831;
     -webkit-transition: all 0.2s linear;
     transition: all 0.2s linear;
 }
 
 .input:focus, .input:hover {
-    background-color: #2e2e2e;
+    background-color: #b1b1b1;
     outline-width: 0;
 }
 
 .button {
     flex: 1;
     padding: 1em;
-    color: #252525;
     font-weight: 500;
     font-size: 1em;
-    border: solid 3px #990ae3;
+    border: solid 3px #222831;
     background: transparent;
     cursor: pointer;
-    background: #990ae3;
-    color: #dddddd;
+    background: #222831;
+    color: #DDDDDD;
     padding: 1em;
     -webkit-transition: all 0.2s linear;
     transition: all 0.2s linear;
@@ -50,7 +49,7 @@
 
 .button:hover {
     background: transparent;
-    color: #990ae3;
+    color: #222831;
     -webkit-transition: all 0.2s linear;
     transition: all 0.2s linear;
 }
@@ -59,12 +58,12 @@
     flex: 1;
     margin: 0.5em;
     font-size: 3em;
-    color: #990ae3;
+    color: #222831;
     margin-bottom: 0.5em;
 }
 
 .wrapper {
-    background-color: #252525;
+    background-color: #DDDDDD;
     list-style-type: none;
     padding: 0;
     border-radius: 3px;
@@ -73,7 +72,7 @@
 .warn {
     flex: 1;
     padding: 0.5em;
-    color: #b91d3f;
+    color: #F05454;
     font-weight: 500;
     font-size: 1em;
     -webkit-transition: all 0.2s linear;

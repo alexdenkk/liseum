@@ -17,7 +17,6 @@ func (mw *Middleware) Auth(f HandlerFunc) http.HandlerFunc {
 		t, err := tools.GetCookie(r, "token")
 
 		if err != nil {
-			print("cant get cookie")
 			http.Redirect(w, r, "/user/login/", http.StatusMovedPermanently)
 			return
 		}
@@ -25,7 +24,6 @@ func (mw *Middleware) Auth(f HandlerFunc) http.HandlerFunc {
 		claims, err := token.ParseJWT(t, mw.SignKey)
 
 		if err != nil {
-			print("cant parse cookie")
 			http.Redirect(w, r, "/user/login/", http.StatusMovedPermanently)
 			return
 		}

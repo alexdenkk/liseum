@@ -47,6 +47,7 @@ func (app *App) RouteImages(r *mux.Router) {
 	sub := r.PathPrefix("/img").Subrouter()
 	sub.HandleFunc("/for/{class}/", app.Handler.GetImagesFor)
 	sub.HandleFunc("/{class}/create/", app.MW.Auth(app.Handler.CreateImage))
+	sub.HandleFunc("/{id:[0-9]+}/", app.Handler.GetImage)
 }
 
 func (app *App) RouteAdmin(r *mux.Router) {

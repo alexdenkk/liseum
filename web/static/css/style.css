@@ -6,8 +6,8 @@
 }
 
 body {
-    color: #dddddd;
-    background-color: #252525;
+    color: #222831;
+    background-color: #DDDDDD;
     text-align: center;
     font-family: arial;
 }
@@ -19,14 +19,13 @@ header {
 
 a {
     text-decoration: none;
-    color: #990ae3;
+    color: #30475E;
 }
 
 .top {
 	position: relative;
 	height: 80px;
     padding: 15px;
-	background: linear-gradient(141deg, #b56ff7 0%, #d16cf0 40%, #990ae3 90%);
+	background-color: #222831;
     text-align: center;
 }
-

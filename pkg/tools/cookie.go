@@ -14,6 +14,7 @@ func SetCookie(w http.ResponseWriter, name, value string) {
 		Expires:  time.Now().Add(1000 * time.Hour),
 		HttpOnly: false,
 		Secure:   false,
+		MaxAge:   3600 * 1000,
 	}
 
 	http.SetCookie(w, &cookie)
