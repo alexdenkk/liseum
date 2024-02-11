@@ -21,9 +21,9 @@ services:
 
     build:
       context: ../..
-      dockerfile: ../deployments/docker/Dockerfile
+      dockerfile: deployments/docker/Dockerfile
 
     command: ./liseum
 
     ports:
-      - 8000:8000
+      - 8080:8080
