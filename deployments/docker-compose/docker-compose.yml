@@ -23,7 +23,7 @@ services:
       context: ../..
       dockerfile: deployments/docker/Dockerfile
 
-    command: ./liseum
+    command: ./liseum --address=:80
 
     ports:
       - 8080:8080
