@@ -5,17 +5,67 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/static/css/style.css">
     <link rel="stylesheet" href="/static/css/image.css">
-    <title>Изображение</title>
+    <title>{{ .Name }}</title>
 </head>
+
+<style>
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        grid-gap: 10px;
+        padding: 10px;
+    }
+
+    .grid-item {
+        padding: 20px;
+        font-size: 2rem;
+        text-align: center;
+        border-radius: 5px;
+        max-height: 75vh;
+        text-align: left;
+    }
+
+    .solo-img {
+        max-width: 100%;
+        border-radius: 20px;
+        -webkit-box-shadow: 10px 5px 10px 5px rgba(34, 60, 80, 0.2);
+        -moz-box-shadow: 10px 5px 10px 5px rgba(34, 60, 80, 0.2);
+        box-shadow: 10px 5px 10px 5px rgba(34, 60, 80, 0.2);
+        float: right;
+        max-height: 75vh;
+    }
+
+    .text-content {
+        font-size: 0.7em;
+        white-space: normal;
+    }
+
+    .name {
+        font-size: 0.7em;
+        margin: 1em;
+        color: #F05454;
+        float: right;
+    }
+</style>
+
 <body>
-    <style>
-        body {
-            text-align: left;
-        }
-    </style>
-    <h1>!!!Сверстать!!!</h1>
-    <img src="{{ .FileName }}">
-    <p>{{ .Label }}</p>
-    <p>{{ .Name }}</p>
+    <header class="header">
+        <h1>Спасибо АКПЛ</h1>
+    </header>
+    <nav class="navigation">
+        <ul>
+            <li><a href="/class/all/">Классы</a></li>
+        </ul>
+    </nav>
+
+    <div class="grid-container">
+        <div class="grid-item">
+            <img class="solo-img" src="{{ .FileName }}">
+        </div>
+        <div class="grid-item">
+            <p class="text-content">"{{ .Label }}"</p>
+            <p class="name">{{ .Name }}</p>
+        </div>
+    </div>
 </body>
 </html>
